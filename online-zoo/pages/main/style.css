@@ -351,6 +351,7 @@
 
 html {
    font-family: 'Roboto';
+   font-style: normal;
    
    display: flex;
    justify-content: center;
@@ -364,8 +365,7 @@ header {
    display: flex;
    align-items: center;
 
-   font-family: 'Roboto';
-   font-style: normal;
+
    font-weight: 500;
    font-size: 16px;
    line-height: 140%;
@@ -374,12 +374,34 @@ header {
 
 }  
 
-.logo {
-   width: 82px;
-   height: 52px;
 
-   margin-left: 220px;
-   margin-right: 63px;
+h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19.0145px;
+  line-height: 120%;
+
+  width: 82px;
+  height: 52px;
+
+  margin-left: 206px;
+  margin-right: 63px;
+  border: 1px solid #fff;
+  /* or 23px */
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-right: 1px;
+}
+
+.bamboo {
+  display: inline;
+  position: relative;
+  left: 230px;
+  top: 6px;
 }
 
 ul {
@@ -453,5 +475,139 @@ ul {
    margin-top: 69px;
    
    color: #FFFFFF;
-   
 }
+
+.theBackstage {
+  height: 1829px;
+  width: 1600px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.backstageWrapper{
+  display: flex;
+  width: 1161px;
+  height: 403px;
+}
+
+.backstagetext {
+  padding-left: 87px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  margin: 0;
+  /* or 58px */
+  
+  
+  color: #333B41;
+}
+
+p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0px;
+  /* or 21px */
+  
+  
+  color: #333B41;
+}
+
+h3 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0px;
+  /* identical to box height, or 29px */
+  
+  
+  color: #333B41;
+  
+}
+
+.textBackstage {
+  padding-bottom: 34px;
+}
+
+
+.animalCardsSection {
+  width: 1620px;
+  margin-left: 434px;
+}
+
+.animalCard {
+  width: 366px;
+  height: 426px;
+  margin-right: 30px;
+  display: inline-block;
+
+  border: 1px solid #F9804B; 
+  border-radius: 2%;
+}
+
+.four {
+  visibility: hidden;
+}
+
+.animalCardsSection.two {
+  margin-top: 20px;
+}
+
+.imageAnimalCardWrapper {
+  width: 366px;
+  height: 366px;
+}
+
+.descriptionAnimalCard {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.animalTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 22px */
+  
+  text-transform: uppercase;
+  
+  color: #000000;
+}
+
+.animalCountry {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height, or 18px */
+  
+  
+  color: #000000;
+}
+
+.imageAnimalCard {
+  border-top-left-radius: 2%;
+border-top-right-radius: 2%;
+}
+
+
+
+
