@@ -1041,6 +1041,10 @@ h3 {
   border: 1px solid #FE9013;
 }
 
+.choose1 {
+  
+}
+
 .choose1:checked , .choose2:checked {
   width: 16px;
   height: 16px;
