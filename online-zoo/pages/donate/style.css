@@ -435,10 +435,22 @@ ul {
    transition: linear 0.1s;
 }
 
+
+.nav  li  a:hover  {
+  color:#F9804B;
+}
+
 .nav > li:hover , .designedBy:hover {
   color:#F9804B;
 }
 
+.nav > li:active , .designedBy:active {
+  color:#4B9200;
+}
+
+.nav > li a:active{
+  color:#4B9200;
+}
 .designedBy {
    margin-left: 385px;
    transition: linear 0.1s;
@@ -992,6 +1004,12 @@ h3 {
 
 .numberAmountWrapper .Number {
   margin-right: 54px;
+
+  cursor: pointer;
+}
+
+.numberAmountWrapper .Number:hover {
+  color: #F9804B;
 }
 
 .circleLine {
@@ -1005,9 +1023,13 @@ h3 {
   margin-right: 120px;
 
   background: #FFEE2E;
+
+  cursor: pointer;
 }
 
-.circleWrapper .active {
+
+
+.circleWrapper .activeCircle {
   position: absolute;
   
   top: -14px;
@@ -1056,9 +1078,9 @@ h3 {
 }
 
 .amountInput {
-  background-color: transparent;
+  background-color: #333B41;
   border: 1px solid;
-  border-color: #929699;
+  border-color: #929995;
 
   width: 268px;
   height: 54px;
@@ -1068,10 +1090,20 @@ h3 {
   border-radius: 2px;
   color: #fff;
   -webkit-appearance: none;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .amountInput:focus {
   border-color: #4B9200;
+  background-color: transparent;
+  color:#4B9200 ;
+  font-weight: 700;
   -webkit-appearance: none;
 }
 
@@ -1283,7 +1315,7 @@ footer {
   height: 364px;
 }
 
-.columnOne h1 {
+.columnOne h2 {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -1404,18 +1436,34 @@ footer {
 
 
 
+
 .emailInput {
   background-color: transparent;
-  border: 1px solid;
-  border-color: #F9804B;
+  border: 1px solid #F9804B;
 
-  width: 211px;
-  height: 36px;
+  width: 228px;
+  height: 42px;
 
   padding-left: 10px;
   border-radius: 2px;
   color: #fff;
   -webkit-appearance: none;
+}
+
+input[type="email"]:valid {
+  border: 1px solid #4B9200;
+  color:#4B9200 ;
+}
+
+input[type='email']:not(hover):not(focus) {
+  border: 1px solid #F9804B;
+}
+
+
+
+input[type="email"]:focus:invalid {
+  border: 1px solid #D31414;
+  color: #D31414;
 }
 
 .emailInput:focus {
