@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./tablet.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -20,22 +20,26 @@
                </h1>
                <img src="../../assets/images/bamboo.svg" alt="bamboo" class="bamboo">
             </div>
-         <ul class="nav">
-            <li style="color: #F9804B;
-            ">About</li>
-            <li id="map">Map</li>
-            <li>Zoos</li>
-            <li><a href="https://rolling-scopes-school.github.io/ziberpax-JSFE2022Q3/online-zoo/pages/donate/"> Donate</a></li>
-            <li>Contact us</li>
-         </ul>
+            <ul class="nav">
+               <li style="color: #F9804B;
+               ">About</li>
+               <li id="map">Map</li>
+               <li>Zoos</li>
+               <li class="donateList"><a href="https://rolling-scopes-school.github.io/ziberpax-JSFE2022Q3/online-zoo/pages/donate/"> Donate</a></li>
+               <li>Contact us</li>
+            </ul>
          <div class="designedByWrapper">
             <a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks"><div class="designedBy">Designed by ©</div></a>
+         </div>
+         <div class="burgerWrapper">
+            <div class="burgerIcon">
+               <span></span>
+            </div>
          </div>
       </div>
    </header>
 
    <main>
-
       <section class="sectionOne" style="background-image: url(../../assets/images/Giant\ Panda.png);">
 
          <div class="sectionOnePanda">
@@ -218,7 +222,7 @@
                </div>
             </div>
             <button class="feedAFriendButtom">Feed a friend now</button>
-      </section>
+      </section>  
 
       <section class="testimonialsSection">
          <div class="testimonialsWrapper">
@@ -305,6 +309,7 @@
             <input  class="styled-slider" type="range" name="range" value="0">
             <button class="testimonialsButton">leave feedback</button>
          </div>
+         <img src="../../assets/images/leav_foto.png" alt="leav_foto" class="leav_tablet">
       </section>
 
    </main>
@@ -326,17 +331,18 @@
                   <a href="https://www.facebook.com/RollingScopesSchool"><img src="../../assets/icons/facebook.svg" class="facebook" ></a>
                </li>
                <li>
-                  <a href="https://twitter.com/rollingscopes"><img src="../../assets/icons/twitter.svg"></a>
+                  <a href="https://twitter.com/rollingscopes"><img src="../../assets/icons/twitter.svg" class="twitter"></a>
                </li>
                <li>
-                  <a href="https://www.instagram.com/rsschool_news/"><img src="../../assets/icons/instagram.svg"></a>
+                  <a href="https://www.instagram.com/rsschool_news/"><img src="../../assets/icons/instagram.svg" class="instagram"></a>
                </li>
                <li>
-                  <a href="https://www.youtube.com/c/rollingscopesschool"><img src="../../assets/icons/youtube.svg"></a>
+                  <a href="https://www.youtube.com/c/rollingscopesschool"><img src="../../assets/icons/youtube.svg" class="youtube"></a>
                </li>
             </ul>
 
          </div>
+
          <div class="columnTwo">
             <ul class="nav">
                <li style="color: #F9804B;">About</li>
@@ -345,6 +351,7 @@
                <li>Contact us</li>
             </ul>
          </div>
+
          <div class="columnThree">
             <div class="inputPartWrapperFooter">
                <h3>Subscribe to our news</h3>
@@ -360,9 +367,15 @@
                <p>©RSSchool & ©Yem Digital 2021</p>
             </div>
          </div>
+
       </div>
    </footer>
 
-   
+
+  
+   <script>
+      alert(`Привет. Сделал адаптив только 1000 пикселей, буду доделывать сегодня/завтра. Если у вас есть возможность, пожалуйста, проверьте мою работу позже. Спасибо`)
+   </script> 
+
 </body>
 </html>
