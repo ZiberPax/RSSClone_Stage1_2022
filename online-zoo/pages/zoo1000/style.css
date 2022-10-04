@@ -639,7 +639,7 @@ header .designedByWrapper {
   color: #333B41;
 }
 
-h3 {
+.textAnimalCard h3 {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -724,7 +724,7 @@ h3 {
   border-radius: 2%;
 }
 
-.four {
+.animalCard.four {
   display: none;
 }
 
@@ -881,11 +881,10 @@ h3 {
 
 .pickAndFeedAFriendSection {
   width: 100vw;
-  min-height: 1004px;
+  height: 876px;
 
   display: flex;
   justify-content: center;
-  align-items: center;
 
   background:   linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%);
   
@@ -893,12 +892,10 @@ h3 {
 }
 
 .textWrapper {
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
-  margin-left: 40px;
+  align-items: center;
 }
 
 p .linktext {
@@ -912,8 +909,10 @@ p .linktext:hover {
 }
 
 .pickAndFeedWrapper {
-  width: 1160px;
-  height: 835px;
+  width: 94%;
+  height: 90.86%;
+
+  box-sizing: border-box;
 
   background: rgba(253, 253, 255, 0.52);
   backdrop-filter: blur(2px);
@@ -923,6 +922,11 @@ p .linktext:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding-left: 48px;
+  padding-right: 48px;
+
+  margin-top: 3%;
   margin-bottom: 32px;
 }
 
@@ -931,11 +935,12 @@ p .linktext:hover {
   align-items: center;
   justify-content: space-between;
 
+  box-sizing: border-box;
 
-  width: 770px;
+
+  width: calc(770 / (940 - 48 - 48) * 100%);
   height: 250px;
 
-  margin-top: 40px;
 }
 
 .feedAFriendButtom {
@@ -949,7 +954,7 @@ p .linktext:hover {
   border: none;
   background-color: #F9804B;
 
-  margin-top: 54px;
+  margin-top: 65px;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -980,7 +985,7 @@ p .linktext:hover {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 48px;
+  font-size: calc( (100vw - 640px)/(1000 - 640) * (48 - 42) + 42px);
   line-height: 120%;
   /* identical to box height, or 58px */
   
@@ -988,8 +993,8 @@ p .linktext:hover {
   
   color: #FE9013;
 
-  margin-right: 37px;
-  margin-top: 43px;
+  margin-top: 3%;
+  margin-bottom: 0;
 
   
 }
@@ -998,12 +1003,12 @@ p .linktext:hover {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: calc( (100vw - 640px)/(1000 - 640) * (24 - 22) + 22px);;
   line-height: 29px;
   
   color: #333B41;
 
-  margin-top: 30px;
+  margin-top: 22px;
 }
 
 .textWrapper p:nth-child(3) {
@@ -1017,8 +1022,7 @@ p .linktext:hover {
   
   color: #333B41;
 
-  margin-top: 42px;
-  white-space: nowrap;
+  margin-top: 24px;
 }
 
 .textWrapper p:nth-child(4) {
@@ -1050,7 +1054,7 @@ p .linktext:hover {
   font-size: 36px;
   line-height: 130%;
   /* identical to box height, or 47px */
-  margin-top: 61px;
+  margin-top: 40px;
   
   color: #333B41;
 }
@@ -1061,12 +1065,12 @@ p .linktext:hover {
   align-items: flex-start;
   flex-direction: column;
 
-  width: 168px;
+  width: calc(168 / 770 * 100%);
   height: 244px;
 }
 
 .imageWrapper{
-  width: 168px;
+  width: 100%;
   height: 168px;
   left: 0px;
   top: 0px;
@@ -1083,7 +1087,7 @@ p .linktext:hover {
 }
 
 .cardWrapper p {
-  margin-top: 25px;
+  margin-top: 31px;
 }
 
 .arrow {
@@ -1095,21 +1099,22 @@ p .linktext:hover {
 /* testimonialsSection */
 
 .testimonialsSection {
-  height: 920px;
+  height: 842px;
   width: 100vw;
   position: relative;
 
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .testimonialsWrapper {
-  width: 1160px;
-  height: 650px;
+  width: calc(940 / 1000 * 100%);
+  height: 850px;
 
   display: flex;
   flex-direction: column;
+
+  box-sizing: border-box;
 }
 
 .testimonialsCardsWrapper {
@@ -1117,13 +1122,16 @@ p .linktext:hover {
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 50px;
+  margin-top: 24px;
 }
 
 .testimonialsCard {
-  width: 235px;
-  height: 358px;
+  width: calc(293 / 940 * 100%);
+  height: calc(391 / 400 * 100%);
   padding: 15px;
+  padding-bottom: 30px;
+
+  box-sizing: border-box;
 
   border: 2px solid;
   border-radius: 20px;
@@ -1136,19 +1144,23 @@ p .linktext:hover {
   overflow: hidden;
 }
 
+.testimonialsCard.two {
+  display: none;
+}
+
 input[type=range] {
-  width: 597px;
+  width: calc(390 / 940 * 100%);
   height: 6px;
   background: #F1F3F2;
   border-radius: 5px;
   appearance: none;
 
   align-self: center;
-  margin-top: 23px;
+  margin-top: 15px;
 }
 
 input[type=range]::-webkit-slider-thumb {
-  width: 115.19px;
+  width: calc(75 / 390 * 100%);
   height: 6px;
   background: #FE9013;
   border-radius: 5px;
@@ -1166,16 +1178,18 @@ input[type=range]::-webkit-slider-thumb {
   line-height: 130%;
   /* identical to box height, or 47px */
   
+  margin-top: calc(100 / 940 * 100%);
+  margin-bottom: 0;
+
   text-align: center;
   
   color: #333B41;
 }
 
-.autorWrapper {
+.testimonialsCard .autorWrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
   color:#ABABAB;
   cursor: pointer;
 }
@@ -1218,8 +1232,8 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .testimonialsTextWrapper {
-  width: 235px;
-  height: 312px;
+  width: 100%;
+  height: 315px;
   overflow: hidden;
 }
 
@@ -1229,7 +1243,7 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 5px;
   background-color: #F9804B;
 
-  margin-top: 33px;
+  margin-top: 50px;
   
   display: flex;
   justify-content: center;
@@ -1264,7 +1278,10 @@ input[type=range]::-webkit-slider-thumb {
 .leav {
   position: absolute;
   right: 0;
-  bottom: -131px;
+  bottom: -86px;
+  z-index: 0;
+
+  content: url(../../assets/images/leav_foto_small.png) !important;
 }
 
 footer {
@@ -1279,8 +1296,8 @@ footer {
 }
 
 .footerWrapper {
-  width: 1160px;
-  height: 360px;
+  width: calc(905 / 1000 * 100%);
+  height: calc(370 / 450 * 100%);
 
   display: flex;
 }
@@ -1292,7 +1309,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 
-  width: 390px;
+  width: calc(298 / 905 * 100%);
   height: 364px;
 }
 
@@ -1337,7 +1354,7 @@ footer {
   border-radius: 5px;
   background-color: #F9804B;
 
-  margin-top: 33px;
+  margin-top: 17px;
   
   display: flex;
   justify-content: center;
@@ -1368,7 +1385,11 @@ footer {
 
 
 .columnOne ul {
+  padding-left: 0;
   list-style-type: none;
+  
+  padding: 0;
+  margin: 0;
 }
 
 .columnOne ul li {
@@ -1380,22 +1401,30 @@ footer {
   /* or 22px */
   
   color: #FFFFFF;
+
+  margin-bottom: 3px;
 }
 
 .columnTwo {
+  width: calc(292 / 905 * 100%);
+
   display: flex;
   align-items: end;
+
+  white-space: nowrap;
+  
+  margin-left: -52px;
 }
 
 .columnTwo ul li {
   color: #fff;
-  margin-right: 51px;
+  margin-right: 44px;
 }
 
 
 
 .columnThree {
-  width: 365px;
+  width: calc(365 / 905 * 100%);
   height: 348px;
 
   display: flex;
@@ -1422,10 +1451,10 @@ footer {
   background-color: transparent;
   border: 1px solid #F9804B;
 
-  width: 228px;
+  width: calc(225 /365 * 100%);
   height: 42px;
 
-  padding-left: 10px;
+  padding-left: 0;
   border-radius: 2px;
   color: #fff;
   -webkit-appearance: none;
@@ -1483,6 +1512,8 @@ input[type="email"]:focus:invalid {
 }
 
 .inputPartWrapperFooter {
+  width: 100%;
+
 
   display: flex;
   flex-direction: column;
@@ -1497,6 +1528,23 @@ input[type="email"]:focus:invalid {
   justify-self: flex-end;
   
   color: #FFFFFF;
+
+}
+
+.inputPartWrapperFooter h3 {
+  width: 100%;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  /* identical to box height, or 29px */
+  
+  
+  color: #FFFFFF;
+
+  margin: 0;
 }
 
 
