@@ -528,6 +528,8 @@ ul {
    left: calc( (100vw - 1000px)/(1600 - 1000) * (89 - 75) + 75px);
    top: 73px;
    position: relative;
+
+   width: calc( (100vw - 1000px)/(1600 - 1000) * (366 - 200) + 200px);
 }
 
 .buttonWathOnline {
@@ -588,11 +590,7 @@ ul {
   margin-top: 140px;
 }
 
-.backstagetext {
-  padding-left: 87px;
-  display: flex;
-  flex-direction: column;
-}
+
 
 h2 {
   font-family: 'Roboto';
@@ -655,7 +653,7 @@ h3 {
 }
 
 .animalCard {
-  width: 366px;
+  width: calc( (100vw - 1000px)/(1600 - 1000) * (366 - 200) + 200px);
   height: 426px;
   margin-right: 25px;
   display: inline-block;
@@ -696,7 +694,7 @@ h3 {
 
 .imageAnimalCardWrapper {
 
-  width: 366px;
+  width: calc( (100vw - 1000px)/(1600 - 1000) * (366 - 200) + 200px);
   height: 366px;
 }
 
@@ -736,11 +734,15 @@ h3 {
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
   transition:ease-in-out 0.5s;
+  width: 100%;
 }
 
 .animalCardWrapper {
   margin-top: 180px;
   position: relative;
+
+  width:calc( (100vw - 1000px)/(1600 - 1000) * (2080 - 1600) + 1600px) ;
+
 }
 
 .buttonAnimalSection {
@@ -1651,6 +1653,7 @@ header .designedByWrapper {
 }
 
 .wrapperParagraph {
+  width: calc( (100vw - 640px)/(1000 - 640) * (366 - 200) + 200px);
 
    font-family: 'Roboto';
    font-style: normal;
@@ -1892,6 +1895,7 @@ header .designedByWrapper {
   justify-content: space-between;
   align-items: center;
   padding: 0px 10px;
+  padding-left: 13px;
 }
 
 .animalTitle {
@@ -2231,12 +2235,16 @@ p .linktext:hover {
   align-items: center;
 }
 
+.imageWrapper img {
+  width: calc(110 / 170 * 100%);
+}
+
 .cardWrapper p {
   margin-top: 31px;
 }
 
 .arrow {
-  margin-bottom: 95px;
+  margin-bottom: 80px;
 }
 
 
@@ -2567,7 +2575,9 @@ footer {
 
 .columnTwo ul li {
   color: #fff;
-  margin-right: 44px;
+
+  margin-right:calc( (100vw - 640px)/(1000 - 640) * (43 - 0) + 0px) ;
+
 }
 
 
@@ -3287,6 +3297,7 @@ ul {
 }
 
 .wrapperParagraph {
+  width: calc( (100vw - 320px)/(640 - 320) * (240  - 150) + 150px);
 
   font-family: 'Roboto';
   font-style: normal;
@@ -3589,14 +3600,14 @@ h3 {
 
 
 .buttonAnimalSection.left {
- top: calc(580 / 1477 * 100%);
+ top: calc( (100vw - 320px)/(640 - 320) * (345 - 225) + 225px);
  left: calc( (100vw - 320px)/(640 - 320) * (243 - 50) + 50px);
 
 }
 
 .buttonAnimalSection.right {
 
- top: calc(580 / 1477 * 100%);
+  top: calc( (100vw - 320px)/(640 - 320) * (345 - 225) + 225px);
  right: calc( (100vw - 320px)/(640 - 320) * (243 - 50) + 50px);
 }
 
@@ -4987,6 +4998,7 @@ ul {
 }
 
 .wrapperParagraph {
+  width: calc( (100vw - 0px)/(320 - 0) * (120 - 100) + 100px);;
 
   font-family: 'Roboto';
   font-style: normal;
