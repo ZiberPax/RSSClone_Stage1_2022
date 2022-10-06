@@ -3103,6 +3103,8 @@ main {
 }
 
 header {
+  position: fixed;
+  z-index: 100;
   width: 100vw;
   height: 34px;
   background-color: #000;
@@ -4965,6 +4967,7 @@ ul {
 }
 
 .sectionOne {
+  overflow: inherit;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -5016,7 +5019,7 @@ ul {
 }
 
 .buttonWathOnline {
-  position: absolute;
+    position: absolute;
     top: calc(208 / 187 * 100%);
     left: calc(13 / 320* 100%);
     width: calc(298 / 320* 100%);
@@ -5044,6 +5047,7 @@ ul {
 }
 
 .theBackstage {
+  z-index: 1;
  height: auto;
  width: 100vw;
  display: flex;
