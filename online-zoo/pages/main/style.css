@@ -392,6 +392,8 @@ header {
 .wrapperCover {
   height: 34px;
   width: 100%;
+
+  display: none;
 }
 
 .headerWrapper {
@@ -3124,6 +3126,13 @@ header {
   line-height: 140%;
   color: #fff;
 }  
+
+.wrapperCover {
+  height: 34px;
+  width: 100%;
+
+  display: inherit;
+}
 
 .headerWrapper {
  width: 100%;
