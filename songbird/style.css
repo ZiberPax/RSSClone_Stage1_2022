@@ -1,0 +1,409 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-y: hidden;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --active-color: #F38B68;
+  --hover-color:#eb663a;
+}
+
+.body {
+  background-image: url(./assets/img/1636931326_3-bogatyr-club-p-fon-gradient-svetlii-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: 'Pacifico', cursive;
+
+}
+
+.body-wrapper { 
+  width: 70vw;
+  height: 100vh;
+
+  margin: 0 auto;
+} 
+
+.header {
+  width: 100%;
+  height: 10vh;
+
+  /* background-color: rgba(128, 128, 128, 0.454); */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.5em;
+}
+
+.logo {
+  width: 20%;
+}
+
+.logo-title {
+  width: 100%;
+}
+
+.logo-title__paragraph {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav {
+  width: 65%;
+
+}
+
+.nav__ul {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__li {
+  display: inline;
+  margin-right: 5%;
+
+}
+
+.nav__a {
+  text-decoration: none;
+  color: black;
+
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.nav__a.active {
+  text-decoration: underline;
+  text-decoration-color: var(--active-color);
+}
+
+.nav__a:hover {
+  color: var(--active-color);
+}
+
+.designBy {
+  width: 15%;
+
+  display: flex;
+  justify-content: end;
+  white-space: nowrap;
+}
+
+.nav__a:hover {
+  color: var(--active-color);
+}
+
+.nav__a:hover {
+  color: var(--active-color);
+}
+
+.burger {
+  width: 100px;
+  height: 100px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  display: none;
+}
+
+.burger__wrapper.line {
+  width: 50px;
+  height: 6px;
+
+  margin: 3px auto;
+
+  background-color: black;
+}
+
+
+/* END OF HEADER */
+
+.main {
+  width: 100%;
+  height: 80vh;
+}
+
+.introduce {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.introduce__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 35%;
+  height: 100%;
+}
+
+.introduce__text_title {
+  display: block;
+  font-size: 4.5em;
+  text-align: center; 
+
+  margin-bottom: 1rem;
+}
+
+.introduce__text_describe {
+  font-size: 1.5em;
+  text-align: center;
+
+  margin-bottom: 1rem;
+}
+
+.introduce__text_button {
+  width: 80%;
+  height: 70px;
+
+  background-color:var(--active-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  font-size: 1.5em;
+
+  border-radius: 50px;
+  border: none;
+
+  transition: 0.3s;
+}
+
+.introduce__text_button:hover {
+  background-color:var(--hover-color);
+}
+
+.introduce__img_wrapper {
+  width: 700px;
+  height: 700px;
+
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+
+  background-image: url(./assets/img/ptitsy-vetka-chernogolovyi-tsvetnoi-trupial.jpg);
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 100%;
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__ul {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__ul_li {
+  width: 100%;
+  height: 100%;
+
+  margin-right: calc(10% / 3);
+
+  font-size: 1.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__ul_li.a {
+  width: 100%;
+  height: 100%;
+}
+
+.game-over {
+  
+}
+
+@media (max-width: 1500px) {
+
+  .introduce__img_wrapper {
+    width: 400px;
+    height: 400px;
+  }
+
+  .introduce__text_title {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 950px) {
+  .introduce__img_wrapper {
+    display: none;
+  }
+  
+  .introduce__text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 894px) {
+  .burger {
+    display: inherit;
+    transition: 0.5s ease-in;
+  }
+
+  .burger.active .burger__wrapper.line:nth-child(2) {
+    opacity: 0;
+    
+  }
+
+  .burger.active .burger__wrapper.line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.2s ease-in;
+  }
+
+  .burger.active .burger__wrapper.line:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+    transition: 0.2s ease-in;
+  }
+
+  .nav, .designBy {
+    display: none;
+  }
+
+  .popup {
+    width: 50%;
+    height: 50%;
+
+    position: fixed;
+    top: 100px;
+    right: -100%;
+
+    background-color: #fff;
+    z-index: 100;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+
+    background-color: rgb(126, 177, 172);
+  }
+
+  .popup.open {
+    right: 20px;
+  }
+  
+  .nav__ul {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-size: 1.5em;
+  }
+
+
+}
