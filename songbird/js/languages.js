@@ -30,10 +30,6 @@ const headerQuiz = document.querySelector(`.nav__ul :nth-child(${2}) a`);
 const headerResult = document.querySelector(`.nav__ul :nth-child(${3}) a`);
 const headerGallery = document.querySelector(`.nav__ul :nth-child(${4}) a`);
 
-console.log(birdLevel6);
-
-console.log(headerMain);
-
 function changeLang (lang) {
   title.textContent = languages[lang].title;
   description.textContent = languages[lang].description;
