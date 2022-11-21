@@ -1,163 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
-  <link rel="stylesheet" href="./styles/quizze.css">
-  <link rel="shortcut icon" href="./assets/icons/social_twitter_bird_2554.png" type="image/x-icon">
-  <title>Квиз</title>
-</head>
-<body class="body">
-  <div class="body-wrapper">
-
-    <header class="header">
-
-      <div class="logo">
-        <div class="logo-title">
-          <p class="logo-title__paragraph">Songbird</p>  
-        </div>
-      </div>
-
-      <div class="nav">
-        <ul class="nav__ul">
-          <li class="nav__li"><a href="./main.html" class="nav__a">Главная</a></li>
-          <li class="nav__li"><a href="./quizze.html" class="nav__a active">Квиз</a></li>
-          <li class="nav__li"><a href="#" class="nav__a">Результаты</a></li>
-        </ul>
-      </div>
-
-      <div class="score">
-        <p class="score__paragraph"><a href="#" class="score__a">Счет: 0</a></p>
-      </div>
-
-      <div class="burger">
-          <span class="burger__wrapper line"></span>
-          <span class="burger__wrapper line"></span>
-          <span class="burger__wrapper line"></span>
-      </div>
-
-      <div class="popup"></div>
-    </header>
-
-    <main class="main">
-      <section class="levels-section">
-        <ul class="levels-section_pagination">
-          <li class="levels-section_item">
-            <a href="#" class="levels-section_item__link">Разминка</a>
-          </li>
-          <li class="levels-section_item">
-            <a href="#" class="levels-section_item__link">Воробьиные</a>
-          </li>
-          <li class="levels-section_item">
-            <a href="#" class="levels-section_item__link">Лесные птицы</a>
-          </li>
-          <li class="levels-section_item">
-            <a href="#" class="levels-section_item__link">Певчие птицы</a>
-          </li>
-          <li class="levels-section_item">
-            <a href="#" class="levels-section_item__link">Хищные птицы</a>
-          </li>
-          <li class="levels-section_item">
-            <a href="#" class="levels-section_item__link">Морские птицы</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="random-birds-section">
-        <img src="./assets/img/whatABird.jpg" alt="Unknown birds" class="random-birds-section__img">
-
-        <div class="random-birds-section__ul-wrapper">
-          <ul class="random-birds-section__ul">
-            <li class="random-birds-section__ul__item">
-              <h3 class="random-birds-section__ul__item__title">******</h3>
-            </li>
-            <li class="random-birds-section__ul__item">
-              <div class="random-birds-section__audio-player-wrapper">
-                <audio controls class="random-birds-section__audio-player">
-                  <source src="./assets/audio/05. Окраины.mp3" type="audio/mpeg">
-                </audio>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="baze-block">
-
-        <div class="baze-block_right-column">
-          <ul class="baze-block_right-column_ul">
-            <li class="baze-block_right-column_ul__item" bird-number="1"><span class="baze-block_right-column_ul__item__bt"></span>Что-то не так</li>
-            <li class="baze-block_right-column_ul__item" bird-number="2"><span class="baze-block_right-column_ul__item__bt"></span></li>
-            <li class="baze-block_right-column_ul__item" bird-number="3"><span class="baze-block_right-column_ul__item__bt"></span></li>
-            <li class="baze-block_right-column_ul__item" bird-number="4"><span class="baze-block_right-column_ul__item__bt"></span></li>
-            <li class="baze-block_right-column_ul__item" bird-number="5"><span class="baze-block_right-column_ul__item__bt"></span></li>
-            <li class="baze-block_right-column_ul__item" bird-number="6"><span class="baze-block_right-column_ul__item__bt"></span></li>
-          </ul>
-        </div>
-
-        <div class="baze-block_left-column">
-
-          <div class="bird-details">
-            <h2 class="bird-details_invate-to-listen">Пожалуйста, послушайте звуки птицы и сделайте выбор.</h2>
-
-            <div class="bird-details_card hide">
-              <img src="#" alt="Ворон" class="bird-details_image">
-              <ul class="bird-details_ul">
-                <li class="bird-details_ul__item"><h4 class="bird-details_ul__item_h4">Ворон</h4></li>
-                <li class="bird-details_ul__item"><span>Corvus corax</span></li>
-                <li class="bird-details_ul__item">
-                  <div class="bird-details_ul__item__audio-player-wrapper">
-                    <audio controls class="bird-details_ul__item__audio-player">
-                      <source src="" type="audio/mpeg">
-                    </audio>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div class="bird-details_description hide">
-              Ворон – крупная птица. Длина тела достигает 70 сантиметров, размах крыльев – до полутора метров. Вороны населяют окрестности Тауэра. В Англии бытует поверье, что в день, когда черные вороны улетят от Тауэра, монархия рухнет.
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
+    <link rel="stylesheet" href="./styles/quizze.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icons/social_twitter_bird_2554.png"
+      type="image/x-icon"
+    />
+    <title>Квиз</title>
+  </head>
+  <body class="body">
+    <div class="body-wrapper">
+      <header class="header">
+        <div class="logo">
+          <div class="logo-title">
+            <p class="logo-title__paragraph">Songbird</p>
           </div>
         </div>
 
-        <button class="baze-block__button">Следующий уровень</button>
-      </section>
+        <div class="nav">
+          <ul class="nav__ul">
+            <li class="nav__li">
+              <a href="./main.html" class="nav__a">Главная</a>
+            </li>
+            <li class="nav__li">
+              <a href="./quizze.html" class="nav__a active">Квиз</a>
+            </li>
+            <li class="nav__li">
+              <a href="./pages/score.html" class="nav__a">Результаты</a>
+            </li>
+            <li class="nav__li">
+              <a href="./galery.html" class="nav__a">Галерея</a>
+            </li>
+          </ul>
+        </div>
 
-      <section class="game-over">
-        <h2 class="game-over_title">Поздравляю!</h2>
-        <p class="game-over_paragraph">Вы прошли квиз и набрали 30 из 30 возможных баллов</p>
-        <button class="game-over_button">Попробовать еще раз</button>
-      </section>
+        <div class="score">
+          <p class="score__paragraph">
+            <a href="#" class="score__a">Счет: 0</a>
+          </p>
+        </div>
 
-    </main>
+        <div class="burger">
+          <span class="burger__wrapper line"></span>
+          <span class="burger__wrapper line"></span>
+          <span class="burger__wrapper line"></span>
+        </div>
 
-    <footer class="footer">
-      <ul class="footer__ul">
-        <li class="footer__ul_li">
-          <a href="https://github.com/ZiberPax" class="footer__ul_li a">
-            <img src="./assets/icons/iconmonstr-github-1.svg" alt="github img" class="footer__ul_li img">
-          </a>
-        </li>
-        <li class="footer__ul_li">
-          <p class="footer__ul_li paragraph">2022</p>
-        </li>
-        <li class="footer__ul_li">
-          <a href="https://rs.school/js/" class="footer__ul_li a">
-            <img src="./assets/icons/rs_school_js.svg" alt="rs school img" class="footer__ul_li img">
-          </a>
-        </li>
-      </ul>
-    </footer>
+        <div class="popup"></div>
+      </header>
 
-  </div>
+      <main class="main">
+        <section class="levels-section">
+          <ul class="levels-section_pagination">
+            <li class="levels-section_item">
+              <a href="#" class="levels-section_item__link">Разминка</a>
+            </li>
+            <li class="levels-section_item">
+              <a href="#" class="levels-section_item__link">Воробьиные</a>
+            </li>
+            <li class="levels-section_item">
+              <a href="#" class="levels-section_item__link">Лесные птицы</a>
+            </li>
+            <li class="levels-section_item">
+              <a href="#" class="levels-section_item__link">Певчие птицы</a>
+            </li>
+            <li class="levels-section_item">
+              <a href="#" class="levels-section_item__link">Хищные птицы</a>
+            </li>
+            <li class="levels-section_item">
+              <a href="#" class="levels-section_item__link">Морские птицы</a>
+            </li>
+          </ul>
+        </section>
 
-  <script type="module" src="./js/quiz.js"></script>
-  <script src="./js/burger.js"></script>
-</body>
+        <section class="random-birds-section">
+          <img
+            src="./assets/img/whatABird.jpg"
+            alt="Unknown birds"
+            class="random-birds-section__img"
+          />
+
+          <div class="random-birds-section__ul-wrapper">
+            <ul class="random-birds-section__ul">
+              <li class="random-birds-section__ul__item">
+                <h3 class="random-birds-section__ul__item__title">******</h3>
+              </li>
+              <li class="random-birds-section__ul__item">
+                <div class="random-birds-section__audio-player-wrapper">
+                  <!-- <audio controls class="random-birds-section__audio-player">
+                  <source src="./assets/audio/05. Окраины.mp3" type="audio/mpeg">
+                </audio> -->
+                  <audio class="random-birds-section__audio-player">
+                    <source
+                      src="./assets/audio/05. Окраины.mp3"
+                      type="audio/mpeg"
+                    />
+                  </audio>
+                  <div class="custom-player-container">
+                    <div class="custom-player_controls">
+                      <div class="custom-player_controls__playback"></div>
+                      <div class="custom-player_controls_timebar">
+                        <div class="custom-player_controls_timebar_bar"></div>
+                        <div
+                          class="custom-player_controls_timebar_bar_active"
+                        ></div>
+                        <div class="custom-player_controls_timebar_time">
+                          <div>00:00</div>
+                          <div>00:00</div>
+                        </div>
+                      </div>
+                      <div class="custom-player_controls_volume">
+                        range
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="baze-block">
+          <div class="baze-block_right-column">
+            <ul class="baze-block_right-column_ul">
+              <li class="baze-block_right-column_ul__item" bird-number="1">
+                <span class="baze-block_right-column_ul__item__bt"></span>Что-то
+                не так
+              </li>
+              <li class="baze-block_right-column_ul__item" bird-number="2">
+                <span class="baze-block_right-column_ul__item__bt"></span>
+              </li>
+              <li class="baze-block_right-column_ul__item" bird-number="3">
+                <span class="baze-block_right-column_ul__item__bt"></span>
+              </li>
+              <li class="baze-block_right-column_ul__item" bird-number="4">
+                <span class="baze-block_right-column_ul__item__bt"></span>
+              </li>
+              <li class="baze-block_right-column_ul__item" bird-number="5">
+                <span class="baze-block_right-column_ul__item__bt"></span>
+              </li>
+              <li class="baze-block_right-column_ul__item" bird-number="6">
+                <span class="baze-block_right-column_ul__item__bt"></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="baze-block_left-column">
+            <div class="bird-details">
+              <h2 class="bird-details_invate-to-listen">
+                Пожалуйста, послушайте звуки птицы и сделайте выбор.
+              </h2>
+
+              <div class="bird-details_card hide">
+                <img src="#" alt="Ворон" class="bird-details_image" />
+                <ul class="bird-details_ul">
+                  <li class="bird-details_ul__item">
+                    <h4 class="bird-details_ul__item_h4">Ворон</h4>
+                  </li>
+                  <li class="bird-details_ul__item">
+                    <span>Corvus corax</span>
+                  </li>
+                  <li class="bird-details_ul__item">
+                    <div class="bird-details_ul__item__audio-player-wrapper">
+                      <audio
+                        class="bird-details_ul__item__audio-player"
+                        type="audio/mpeg"
+                      >
+                        <source src="" type="audio/mpeg" />
+                      </audio>
+                    </div>
+                    <div class="custom-player-container">
+                      <div class="custom-player_controls">
+                        <div class="custom-player_controls__playback_desc"></div>
+                        <div class="custom-player_controls_timebar_desc">
+                          <div class="custom-player_controls_timebar_bar_desc"></div>
+                          <div
+                            class="custom-player_controls_timebar_bar_active_desc"
+                          ></div>
+                          <div class="custom-player_controls_timebar_time_desc">
+                            <div>00:00</div>
+                            <div>00:00</div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bird-details_description hide">
+                Ворон – крупная птица. Длина тела достигает 70 сантиметров,
+                размах крыльев – до полутора метров. Вороны населяют окрестности
+                Тауэра. В Англии бытует поверье, что в день, когда черные вороны
+                улетят от Тауэра, монархия рухнет.
+              </div>
+            </div>
+          </div>
+
+          <button class="baze-block__button">Следующий уровень</button>
+        </section>
+
+        <section class="game-over">
+          <h2 class="game-over_title">Поздравляю!</h2>
+          <p class="game-over_paragraph">
+            Вы прошли квиз и набрали 30 из 30 возможных баллов
+          </p>
+          <button class="game-over_button">Попробовать еще раз</button>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <ul class="footer__ul">
+          <li class="footer__ul_li">
+            <a href="https://github.com/ZiberPax" class="footer__ul_li a">
+              <img
+                src="./assets/icons/iconmonstr-github-1.svg"
+                alt="github img"
+                class="footer__ul_li img"
+              />
+            </a>
+          </li>
+          <li class="footer__ul_li">
+            <p class="footer__ul_li paragraph">2022</p>
+          </li>
+          <li class="footer__ul_li">
+            <a href="https://rs.school/js/" class="footer__ul_li a">
+              <img
+                src="./assets/icons/rs_school_js.svg"
+                alt="rs school img"
+                class="footer__ul_li img"
+              />
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <script type="module" src="./js/quiz.js"></script>
+    <script src="./js/burger.js"></script>
+  </body>
 </html>
