@@ -96,12 +96,10 @@ function fillBirdsUl() {
 }
 
 function startLevel() {
+  toggleClass(`custom-player_controls__playback`, `pause`)
   scorePerLevel = 5;
   end = false;
   guessBirdNumber = getRandomInt(0, 5);
-  // // // console.log(guessBirdNumber);
-  // // // console.log(birdsData[currentQuestion - 1][guessBirdNumber].name);
-  // // // console.log(birdsData[currentQuestion - 1][5].name);
   birdsName.textContent = birdsData[currentQuestion - 1][guessBirdNumber].name;
   speciesBird.textContent =
     birdsData[currentQuestion - 1][guessBirdNumber].species;
@@ -153,13 +151,8 @@ function playAudio(name, type) {
     name.currentTime = 0;
     name.play();
   }
-  // console.log(name.paused);
   name.play();
   name.volume = 0.2;
-}
-
-function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
 }
 
 function getRandomInt(min, max) {
@@ -174,15 +167,11 @@ function toggleClass (itemClass, itemClassToggle) {
   }
 }
 
-let indicatorBird = document.querySelector(".baze-block_right-column_ul__item");
-// console.log(indicatorBird);
-
-document
-  .querySelector(".baze-block_right-column")
-  .addEventListener("click", (event) => {
+document.querySelector(".baze-block_right-column").addEventListener("click", (event) => {
     showRightSectionBird(birdsData[currentQuestion - 1][+event.target.getAttribute("bird-number") - 1]);
+
     if (!end) {
-      toggleClass(`custom-player_controls__playback_desc`, `pause`)
+      toggleClass(`custom-player_controls__playback_desc`, `pause`);
       if (birdDescription.classList.contains("hide")) {
         birdDescription.classList.remove("hide");
         birdDetailsCard.classList.remove("hide");
@@ -216,7 +205,7 @@ document
           playAudio(winSound, `win`);
           let scoreForStorage = score;
           localStorage.setItem("Очки",JSON.stringify(scoreForStorage));
-          window.open("http://127.0.0.1:5500/pages/score.html");
+          window.open(`https://rolling-scopes-school.github.io/ziberpax-JSFE2022Q3/songbird/pages/score.html`);
         }
       } else {
         scorePerLevel--;

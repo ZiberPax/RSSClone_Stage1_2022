@@ -710,6 +710,28 @@ select {
   height: 100%;
 }
 
+.footer_button_language {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+
+  right: 2%;
+  top: 2%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  font-size: 0.7rem;
+
+  border: 1px solid rgba(154, 154, 154, 0.227);
+  border-radius: 10px;
+  background-color: rgba(154, 154, 154, 0.066);
+}
+
+
 @media (max-width: 1500px) {
 
   .introduce__img_wrapper {
