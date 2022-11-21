@@ -1,0 +1,637 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --active-color: #F38B68;
+  --hover-color:#eb663a;
+}
+
+.body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #E4F2FF;
+  /* background: linear-gradient(to bottom left, #E4F2FF, #E4F2FF, #F2D5D1, #BCD8CA); */
+
+  font-family: 'Pacifico', cursive;
+
+  position: relative;
+}
+
+.body-wrapper { 
+  width: 70vw;
+  height: 100vh;
+
+  margin: 0 auto;
+} 
+
+.header {
+  width: 100%;
+  height: 10vh;
+
+  /* background-color: rgba(128, 128, 128, 0.454); */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  width: 20%;
+}
+
+.logo-title {
+  width: 100%;
+}
+
+.logo-title__paragraph {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav {
+  width: 65%;
+
+}
+
+.nav__ul {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__li {
+  display: inline;
+  margin-right: 2%;
+  font-size: 1.5rem;
+}
+
+.nav__a {
+  text-decoration: none;
+  color: black;
+
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.score__a {
+  text-decoration: none;
+  color: black;
+
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.nav__a.active {
+  text-decoration: underline;
+  text-decoration-color: var(--active-color);
+}
+
+.nav__a:hover {
+  color: var(--active-color);
+}
+
+.nav__a:hover {
+  color: var(--active-color);
+}
+
+
+
+.nav__a:hover {
+  color: var(--active-color);
+}
+
+.designBy__paragraph {
+  white-space: nowrap;
+}
+
+.score {
+  width: 15%;
+
+  display: flex;
+  justify-content: end;
+}
+
+.burger {
+  width: 100px;
+  height: 100px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  display: none;
+}
+
+.burger__wrapper.line {
+  width: 50px;
+  height: 6px;
+
+  margin: 3px auto;
+
+  background-color: black;
+}
+
+
+/* END OF HEADER */
+
+.main {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bird_block, 
+.bird_block_one,
+.bird_block_two,
+.bird_block_three {
+  display: flex;
+}
+
+.bird-details-one, 
+.bird-details-two, 
+.bird-details {
+  width: 50%;
+
+  padding: 1rem;
+  margin: 1rem;
+
+  background-color: #d1e9fe;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #444;
+  border-radius: 10px;
+}
+
+.bird-details_image {
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.bird-details_card {
+  display: flex;
+}
+
+.bird-details_card.hide {
+  display: none;
+}
+
+.bird-details_description {
+  display: inline;
+}
+
+.bird-details_description.hide {
+  display: none;
+}
+
+
+.bird-details_ul {
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% - 240px);
+  min-height: 166px;
+}
+
+.bird-details_ul__item {
+  padding: 0.25rem;
+}
+
+.bird-details_ul__item_h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  
+  margin-bottom: 0.5rem;
+}
+
+.bird-details_ul__item__audio-player {
+  width: 100%;
+}
+
+.baze-block__button {
+  width: 100%;
+
+  margin: 25px 15px;
+  padding: 0.375rem 0.75rem;
+
+  cursor: pointer;
+
+  background-color: #d1e9fe;
+
+  border-radius: 10px;
+  border: 1px solid black;
+
+  transition: 0.5s;
+}
+
+.baze-block__button.active {
+  background-color: #6fa87c;
+}
+
+.baze-block__button:hover {
+  border-color: grey;
+}
+
+.game-over {
+  display: none;
+  width: 100%;
+  
+  padding: 5rem 4rem;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  background-color: #d1e9fe;
+}
+
+.game-over_title { 
+  font-size: 4rem;
+
+  margin-bottom: 1rem;
+}
+
+.game-over_paragraph {
+  font-size: 1.5rem;
+}
+
+.game-over_button {
+  width: 80%;
+
+  font-size: 1rem;
+
+  margin: 25px 0;
+  padding: 15px;
+
+  border-radius: 10px;
+  border: 1px solid grey;
+
+  background-color: #bddefb;
+}
+
+.bird-details_invate-to-listen {
+  padding-top: 1rem;
+  font-weight: normal;
+  display: inherit;
+}
+
+.bird-details_invate-to-listen.hide {
+  padding-top: 1rem;
+  font-weight: normal;
+  display: none;
+}
+
+/* PLAYER */
+
+.custom-player-container {
+  padding: 1rem 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+
+.custom-player_controls {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.custom-player_controls__playback,
+.custom-player_controls__playback_desc { 
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: 12.5px solid transparent;
+  border-left: 25px solid black;
+  border-bottom: 12.5px solid transparent;
+  margin: 0.5rem;
+  flex-shrink: 0;
+
+  transition: 0.2s;
+}
+
+.custom-player_controls__playback.pause,
+.custom-player_controls__playback_desc.pause {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.custom-player_controls_timebar,
+.custom-player_controls_timebar_desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin-top: 19px;
+}
+
+.custom-player_controls_timebar_bar,
+.custom-player_controls_timebar_bar_desc {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+
+  background-color: grey;
+}
+
+.custom-player_controls_timebar_bar_active,
+.custom-player_controls_timebar_bar_active_desc {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  background-color: rgb(87, 101, 177);
+  align-self: flex-start;
+  transition: 0.2s;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: var(--progress, 0%);
+}
+
+.custom-player_controls_timebar_time,
+.custom-player_controls_timebar_time_desc {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.custom-player_controls_volume {
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+
+  margin: 0 1rem;
+
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* END OF MAIN */
+.footer {
+  width: 100%;
+  height: 10vh;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__ul {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__ul_li {
+  width: 100%;
+  height: 100%;
+
+  margin-right: calc(10% / 3);
+  font-size: 1.5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__ul_li.a {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1500px) {
+
+  .introduce__img_wrapper {
+    width: 400px;
+    height: 400px;
+  }
+
+  .introduce__text_title {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 1127px) {
+  .bird-details_card {
+    flex-direction: column;
+  }
+
+  .bird-details_ul {
+    width: 100%;
+  }
+
+  .bird-details_image {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 940px) {
+  .introduce__img_wrapper {
+    display: none;
+  }
+  
+  .introduce__text {
+    width: 100%;
+  }
+
+  .nav, .designBy {
+    display: none;
+  }
+
+  .bird_block_one, 
+  .bird_block_two,
+  .bird_block_three
+   {
+    flex-direction: column;
+  }
+
+  .bird-details-one,
+  .bird-details-two {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .body-wrapper {
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .burger {
+    display: inherit;
+    transition: 0.5s ease-in;
+  }
+
+  .popup {
+    display: inherit;
+  }
+
+  .burger.active .burger__wrapper.line:nth-child(2) {
+    opacity: 0;
+    
+  }
+
+  .burger.active .burger__wrapper.line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.2s ease-in;
+  }
+
+  .burger.active .burger__wrapper.line:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+    transition: 0.2s ease-in;
+  }
+
+  .nav, .designBy {
+    display: none;
+  }
+
+  .popup {
+    width: 50%;
+    height: 50%;
+
+    position: fixed;
+    top: 100px;
+    right: -100%;
+
+    background-color: #fff;
+    z-index: 100;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+
+    background-color: rgb(126, 177, 172);
+  }
+
+  .popup.open {
+    right: 20px;
+  }
+
+  .nav__ul {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+
+
+@media (max-width: 875px) {
+  .body { 
+    overflow-y: inherit;
+  }
+
+  .logo {
+    width: 50%;
+  }
+}
+

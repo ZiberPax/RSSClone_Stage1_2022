@@ -1,4 +1,6 @@
 import { birdsData } from "./birds.js";
+import {playpause} from "./player.js";
+import {timeUpdate} from "./player.js";
 
 let scorePerLevel = 0;
 let score = 0;
@@ -37,6 +39,23 @@ winSound.load();
 const failSound = new Audio();
 failSound.src ="https://github.com/ZiberPax/imgForMomentum/blob/main/birds/assets/audio/error.mp3?raw=true";
 failSound.load();
+
+// PLAYER 
+const current = document.querySelector(".custom-player_controls_timebar_time");
+const progressBar= document.querySelector(".custom-player_controls_timebar_bar");
+const progressBarActive= document.querySelector(".custom-player_controls_timebar_bar_active");
+
+const current_desc  = document.querySelector(".custom-player_controls_timebar_time_desc");
+const progressBar_desc = document.querySelector(".custom-player_controls_timebar_bar_desc");
+const progressBarActive_desc = document.querySelector(".custom-player_controls_timebar_bar_active_desc");
+
+current.lastElementChild.innerHTML = hideBirdsBlockAudio.duration;
+
+playpause(hideBirdsBlockAudio, document.querySelector(".custom-player_controls__playback"));
+timeUpdate(hideBirdsBlockAudio, current, progressBarActive,progressBar);
+
+playpause(audioPlayer, document.querySelector(".custom-player_controls__playback_desc"));
+timeUpdate(audioPlayer, current_desc, progressBarActive_desc,progressBar_desc);
 
 //Запуск логики
 changeActiveLevel();
@@ -80,9 +99,9 @@ function startLevel() {
   scorePerLevel = 5;
   end = false;
   guessBirdNumber = getRandomInt(0, 5);
-  // console.log(guessBirdNumber);
-  // console.log(birdsData[currentQuestion - 1][guessBirdNumber].name);
-  // console.log(birdsData[currentQuestion - 1][5].name);
+  // // // console.log(guessBirdNumber);
+  // // // console.log(birdsData[currentQuestion - 1][guessBirdNumber].name);
+  // // // console.log(birdsData[currentQuestion - 1][5].name);
   birdsName.textContent = birdsData[currentQuestion - 1][guessBirdNumber].name;
   speciesBird.textContent =
     birdsData[currentQuestion - 1][guessBirdNumber].species;
@@ -134,7 +153,7 @@ function playAudio(name, type) {
     name.currentTime = 0;
     name.play();
   }
-  console.log(name.paused);
+  // console.log(name.paused);
   name.play();
   name.volume = 0.2;
 }
@@ -149,14 +168,21 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+function toggleClass (itemClass, itemClassToggle) {
+  if (document.querySelector(`.${itemClass}`).classList.contains(itemClassToggle)) {
+    document.querySelector(`.${itemClass}`).classList.toggle(itemClassToggle)
+  }
+}
+
 let indicatorBird = document.querySelector(".baze-block_right-column_ul__item");
-console.log(indicatorBird);
+// console.log(indicatorBird);
 
 document
   .querySelector(".baze-block_right-column")
   .addEventListener("click", (event) => {
     showRightSectionBird(birdsData[currentQuestion - 1][+event.target.getAttribute("bird-number") - 1]);
     if (!end) {
+      toggleClass(`custom-player_controls__playback_desc`, `pause`)
       if (birdDescription.classList.contains("hide")) {
         birdDescription.classList.remove("hide");
         birdDetailsCard.classList.remove("hide");
@@ -168,6 +194,7 @@ document
         if (currentQuestion != 6) {
           score += scorePerLevel;
           displayScore.textContent = `Счёт: ${score}`;
+
           end = true;
           canMoveOnNextLevel = true;
 
@@ -176,19 +203,27 @@ document
 
           event.target.classList.toggle("correct");
           nextLevelButton.classList.toggle("active");
+          hideBirdsBlockAudio.pause();
           playAudio(winSound, `win`);
+          toggleClass(`custom-player_controls__playback`, `pause`)
         } else {
           end = true;
+          score += scorePerLevel;
+          displayScore.textContent = `Счёт: ${score}`;
           hideImgBirds.src = birdsData[currentQuestion - 1][guessBirdNumber].image;
           hideNameBirds.textContent = birdsData[currentQuestion - 1][guessBirdNumber].name;
           event.target.classList.toggle("correct");
           playAudio(winSound, `win`);
+          let scoreForStorage = score;
+          localStorage.setItem("Очки",JSON.stringify(scoreForStorage));
+          window.open("http://127.0.0.1:5500/pages/score.html");
         }
       } else {
         scorePerLevel--;
+        console.log(scorePerLevel);
         playAudio(failSound, `error`);
         if (!event.target.classList.contains("fault")) {
-          event.target.classList.toggle("fault");
+          event.target.classList.toggle("fault"); 
         }
       }
     }
@@ -205,7 +240,9 @@ nextLevelButton.addEventListener("click", function () {
       changeActiveLevel();
       startLevel();
       fillBirdsUl();
-      console.log(currentQuestion);
+      // // console.log(currentQuestion);
     }
   }
 });
+
+// PLAYER
