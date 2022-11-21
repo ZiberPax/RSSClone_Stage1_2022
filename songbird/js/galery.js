@@ -38,7 +38,7 @@ function fillSection (groupClass, indexArrBird) {
       birdsData[section][index].species;
     birdDescription.textContent =
       birdsData[section][index].description;
-    birdImage.src = https://rolling-scopes-school.github.io/chizhovmn-JSFE2022Q3/brutal-legend/index.js[section][index].image;
+    birdImage.src = birdsData[section][index].image;
     audioSourceDescription.src =
       birdsData[section][index].audio;
     audioPlayer.load();
