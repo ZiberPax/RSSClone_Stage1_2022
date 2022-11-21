@@ -341,6 +341,25 @@ select {
   display: none;
 }
 
+.footer_button_language {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+
+  right: 2%;
+  bottom: 2%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: red;
+}
+
+/* END FOOTER */
+
 @media (max-width: 1500px) {
 
   .introduce__img_wrapper {
@@ -432,6 +451,10 @@ select {
     align-items: center;
 
     font-size: 1.5em;
+  }
+
+  .nav__li {
+    font-size: 1.5rem;
   }
 
 
